@@ -1,0 +1,5 @@
+
+"""
+fastapiusertemplate package initialization.
+"""
+    
