@@ -1,5 +1,5 @@
 import uuid
-from fastapiusertemplate.database import Base
+from .database import Base
 from sqlalchemy import UUID, Column, Integer, String
     
 class User(Base):

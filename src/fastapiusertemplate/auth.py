@@ -4,9 +4,9 @@ from sqlalchemy.orm import Session
 from fastapi import Request, HTTPException, status, Depends
 from typing import Optional
 
-from fastapiusertemplate.database import get_db
-from fastapiusertemplate import models
-from fastapiusertemplate.schema import User
+from .database import get_db
+from . import models
+from .schema import User
 
 from dotenv import load_dotenv
 load_dotenv()

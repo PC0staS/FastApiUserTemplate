@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from fastapiusertemplate import models, schema
-from fastapiusertemplate.auth import get_password_hash
+from . import models, schema
+from .auth import get_password_hash
 import uuid
 
 

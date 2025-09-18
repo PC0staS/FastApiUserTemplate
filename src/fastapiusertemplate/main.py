@@ -1,10 +1,10 @@
 from sqlalchemy.orm import Session
 from fastapi import Depends, FastAPI, HTTPException, status, Response, Request
-from fastapiusertemplate import auth
-from fastapiusertemplate import models
-from fastapiusertemplate import crud 
-from fastapiusertemplate import schema
-from fastapiusertemplate.database import SessionLocal, engine, get_db
+from . import auth
+from . import models
+from . import crud 
+from . import schema
+from .database import SessionLocal, engine, get_db
 from uuid import UUID
 
 models.Base.metadata.create_all(bind=engine)
