@@ -44,7 +44,7 @@ def create_access_token(data: dict):
     to_encode = data.copy()
     import datetime
 
-    expire = datetime.datetime.utcnow() + datetime.timedelta(
+    expire = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(
         minutes=ACCESS_TOKEN_EXPIRE_MINUTES
     )
     to_encode.update({"exp": expire})
@@ -56,7 +56,7 @@ def create_refresh_token(data: dict):
     to_encode = data.copy()
     import datetime
 
-    expire = datetime.datetime.utcnow() + datetime.timedelta(days=7)
+    expire = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=7)
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
