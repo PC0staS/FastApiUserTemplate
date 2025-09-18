@@ -1,5 +1,4 @@
 
 """
 fastapiusertemplate package initialization.
-"""
-    
+"""    
